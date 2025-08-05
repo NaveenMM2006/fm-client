@@ -25,7 +25,7 @@ export default function Login() {
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
       alert("Login successful!");
-      navigate("/dashboard");
+      navigate("/freelancer");
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
     }

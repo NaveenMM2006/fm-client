@@ -62,7 +62,8 @@ import ProtectedRoute from "./utils/ProtectedRoute";
 import CreateGig from './pages/CreateGig';
 import Payment from "./pages/Payment";
 import GigDetail from './pages/GigDetail';
-
+import FreelancerDashboard
+ from './pages/FreelancerDashboard';
 function App() {
   return (
     <Router>
@@ -76,6 +77,9 @@ function App() {
         <Route path="/create" element={<ProtectedRoute role="freelancer"><CreateGig /></ProtectedRoute>} />
         <Route path="/payment/:gigId" element={<ProtectedRoute><Payment /></ProtectedRoute>} />
         <Route path="/gigs/:id" element={<GigDetail />} />
+        <Route path="/freelancer" element={<ProtectedRoute role="freelancer"><FreelancerDashboard/></ProtectedRoute>} />
+        <Route path="/create-gig" element={<CreateGig />} />
+<Route path="/edit-gig/:id" element={<CreateGig />} />
       </Routes>
     </Router>
   );
